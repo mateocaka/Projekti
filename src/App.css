@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+/* src/App.css */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 0px;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 70%;
+}
+
+body {
+    font-family: "Roboto Mono", sans-serif;
+    color: #252525;
+    font-weight: 400;
+    background-color: #f7f2e9;
+    border-bottom: 1.6rem solid #edc84b;
+    min-height: 100vh;
+    padding: 3.2rem;
+    padding-bottom: 6rem;
+
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding:2rem;
+    gap: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* *************** */
+
+.header {
+    align-self: stretch;
+}
+
+.header h1 {
+    /* Non-accessible color */
+    color: #edc84b;
+
+    /* color: #af8602; */
+    font-family: "Roboto Mono", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.header h1::before,
+.header h1::after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 4rem;
+    background-color: #edc84b;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+
+.header h1::before {
+    left: 0;
+}
+
+.header h1::after {
+    right: 0;
+}
+.parfume-list{
+
+    flex-direction: column;
+    padding: 0rem 1rem;
+    list-style: none;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 3rem;
+
+
+}
+/* *************** */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu h2 {
+    display: inline-block;
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.menu > p {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
+    width: 80%;
+}
+
+.pizzas {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 4.8rem;
+}
+
+.pizza {
+    display: flex;
+    gap:1rem;
+}
+
+.pizza img {
+    width: 18rem;
+    aspect-ratio: 1;
+    align-self: start;
+}
+
+.pizza div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.0rem 0;
+}
+
+.pizza h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.pizza p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.pizza span {
+    display: block;
+    font-size: 1.6rem;
+}
+
+.pizza.sold-out {
+    color: #888;
+}
+
+.pizza.sold-out img {
+    filter: grayscale(2%);
+    opacity: 0.8;
+}
+
+
+
+.footer {
+    font-size: 1.4rem;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.btn {
+    color: #252525;
+    font-family: inherit;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    background-color: #edc84b;
+    padding: 1.4rem 3.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: #c7cba7;
+    color: #252525;
+}
+
+
+
+
+
+
+.navbar {
+    background-color: #c7cba7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    box-sizing: border-box;
+
+
+}
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 2rem;
+    color:whitesmoke;
+}
+
+.nav-link {
+    display: inline-block;
+    color: #48422a;
+    padding: 0;
+    position: static;
+    text-decoration: white;
+    font-size: 14px;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+
+
+.search {
+    flex-grow: 1;
+    color: black;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    max-width: 200px;
+}
+
+.search:focus {
+    border-color: #c7cba7;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+
+
+.box {
+    border: 1px solid #dfdfdf;
+    background-color: #f7f2e9;
+    position: page;
+}
+
+.g-btn {
+    width: 100% !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    font-size: 15px !important;
+}
+.g-btn > div,
+.g-btn > div > svg {
+    width: 80px !important;
+    height: 38px !important;
+}
+
+
+
+@media (max-width: 800px) {
+    .pizzas {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+    }
+
+    .pizza {
+        display: list-item;
+        gap: 3.2rem;
+    }
+
+    .parfume-list{
+
+        flex-direction: column;
+        list-style: none;
+        position: page;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+
+
+    }
+    .pizza img {
+        width: 9rem;
+        aspect-ratio: 0;
+        align-self: start;
+    }
+    .navbar {
+        background-color: #c7cba7;
+        position: page;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 1000;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 0px;
+        box-sizing: border-box;
+
+
+    }
+
+    .navbar-nav {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start; /* Align items to the left */
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin: 0 2rem;
+    }
+
+    .nav-link {
+        display: inline-block;
+        padding: 0;
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.3s, border-radius 0.3s;
+    }
+
+    .search {
+        order: -1;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .box {
+        border: 2px solid #dfdfdf;
+        background-color: #fff;
+    }
+
+    .g-btn {
+        width: 100% !important;
+        height: 40px !important;
+        line-height: 50px !important;
+        font-size: 15px !important;
+    }
+    .g-btn > div,
+    .g-btn > div > svg {
+        width: 40px !important;
+        height: 38px !important;
+    }
+}
+
